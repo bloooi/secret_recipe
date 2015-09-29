@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         //splash Activity
         initialize();
 
+        menu_original.load(getApplicationContext());
         //액션바
         final Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         //네비게이션 메뉴 슬라이드 레이아웃

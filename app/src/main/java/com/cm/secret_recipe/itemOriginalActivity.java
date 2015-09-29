@@ -141,9 +141,10 @@ public class itemOriginalActivity extends AppCompatActivity {
                     if (typeID ==0){
                         //여기서 STARMENU List가 추가됩니다
                         menu_original.STARMENU.add(new menu_original(menuBrandI,menuNameS,menuPrice1S,menuPrice2S,menuImageI,"",typeID));
+                        menu_original.save(getApplicationContext());
                         //동시에 List를 배열로 바꿔줍니다.
                         menu_original.starMenu = menu_original.STARMENU.toArray(new menu_original[menu_original.STARMENU.size()]);
-
+                        menu_original.save(getApplicationContext());
                         //typeID가 1이면 원래 메뉴를 뜻합니다.
                     }else if (typeID == 1){
                         //여기서 STARMENU List가 추가됩니다
