@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/star"
+            android:checked="false"
+            android:icon="@drawable/ic_tab_star"
+            android:title="즐겨찾기" />
+
+        <item
+            android:id="@+id/setting"
+            android:checked="false"
+            android:icon="@drawable/ic_tab_setting"
+            android:title="설정하기" />
+
+        <item
+            android:id="@+id/intro"
+            android:checked="false"
+            android:icon="@drawable/ic_tab_book"
+            android:title="어플소개" />
+
+        <item
+            android:id="@+id/notice"
+            android:checked="false"
+            android:icon="@drawable/ic_tab_notice"
+            android:title="회원공지" />
+
+    </group>
+</menu>
