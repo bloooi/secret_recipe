@@ -10,8 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.cm.secret_recipe.BusProvider;
-import com.cm.secret_recipe.PushEvent;
 import com.cm.secret_recipe.R;
 import com.cm.secret_recipe.menu_original;
 import com.squareup.otto.Subscribe;

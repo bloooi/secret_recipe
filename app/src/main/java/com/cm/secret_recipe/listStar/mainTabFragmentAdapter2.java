@@ -4,8 +4,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.cm.secret_recipe.BusProvider;
-import com.cm.secret_recipe.PushEvent;
 import com.cm.secret_recipe.R;
 import com.squareup.otto.Subscribe;
 
