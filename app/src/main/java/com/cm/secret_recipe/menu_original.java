@@ -27,7 +27,7 @@ public final class menu_original implements Serializable{
         try {
             FileOutputStream fileOutputStream = context.openFileOutput(fileName, Context.MODE_PRIVATE);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            objectOutputStream.writeObject(starMenu);
+            objectOutputStream.writeObject(STARMENU);
             objectOutputStream.close();
             fileOutputStream.close();
         } catch (IOException e) {
@@ -38,7 +38,7 @@ public final class menu_original implements Serializable{
         try {
             FileInputStream fileInputStream = context.openFileInput(fileName);
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            starMenu = (menu_original[]) objectInputStream.readObject();
+            STARMENU = (ArrayList<menu_original>) objectInputStream.readObject();
             objectInputStream.close();
             fileInputStream.close();
         } catch (Exception e) {
@@ -486,7 +486,7 @@ public final class menu_original implements Serializable{
                 return false;
         }
     //추가 메뉴에 대한 정보
-    public static class Extra{
+    public static class Extra implements Serializable{
         public int price;
         public String name;
         Extra(String name, int price){
