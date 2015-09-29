@@ -1,5 +1,13 @@
 package com.cm.secret_recipe;
  
+import android.content.Context;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,11 +15,38 @@ import java.util.List;
  * Created by waps12b on 15. 9. 21..
  */
 
-public final class menu_original {
+public final class menu_original implements Serializable{
     // 즐겨찾기 메뉴를 저장하는 ArrayList입니다.
     public static ArrayList<menu_original> STARMENU =  new ArrayList<menu_original>();
     //STARMENU가 adapter에서 바로 등록이 안되 객체 배열로 따로 만들어 저장 했습니다.
     public static menu_original starMenu[] = new menu_original[menu_original.STARMENU.size()];
+
+
+    public static final String fileName = "star.dat";
+    public static synchronized void save(Context context){
+        try {
+            FileOutputStream fileOutputStream = context.openFileOutput(fileName, Context.MODE_PRIVATE);
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            objectOutputStream.writeObject(starMenu);
+            objectOutputStream.close();
+            fileOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public static synchronized void load(Context context){
+        try {
+            FileInputStream fileInputStream = context.openFileInput(fileName);
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            starMenu = (menu_original[]) objectInputStream.readObject();
+            objectInputStream.close();
+            fileInputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
     public int typeID;            //이 메뉴의 메뉴 타입 ID 입니다
     public int drawableID;        //이 메뉴의 이미지 Drawable ID 입니다
