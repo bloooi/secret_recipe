@@ -35,10 +35,7 @@
             android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".itemSecretActivity"
-            android:screenOrientation="portrait">
 
-        </activity>
         <activity android:name=".itemOriginalActivity"
             android:screenOrientation="portrait">
 
@@ -47,6 +44,16 @@
             android:screenOrientation="portrait">
 
         </activity>
+        <activity android:name=".notification"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".intro"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+
     </application>
 
 </manifest>
