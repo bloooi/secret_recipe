@@ -210,7 +210,7 @@ public class itemOriginalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 itemOriginalActivity.this.finish();
             }
-        });
+        }); // d
     }
 
     @Override
