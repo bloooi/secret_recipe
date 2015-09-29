@@ -41,6 +41,7 @@ public final class menu_original implements Serializable{
             STARMENU = (ArrayList<menu_original>) objectInputStream.readObject();
             objectInputStream.close();
             fileInputStream.close();
+            menu_original.starMenu = menu_original.STARMENU.toArray(new menu_original[menu_original.STARMENU.size()]);
         } catch (Exception e) {
             e.printStackTrace();
         }

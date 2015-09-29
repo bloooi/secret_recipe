@@ -146,17 +146,15 @@ public class itemOriginalActivity extends AppCompatActivity {
                         //여기서 STARMENU List가 추가됩니다
                         menu_original.STARMENU.add(new menu_original(menuBrandI,menuNameS,menuPrice1S,menuPrice2S,menuImageI,"",typeID));
                         //동시에 List를 배열로 바꿔줍니다.
-                        menu_original.starMenu = menu_original.STARMENU.toArray(new menu_original[menu_original.STARMENU.size()]);
                         //typeID가 1이면 원래 메뉴를 뜻합니다.
-
                     }else if (typeID == 1){
                         //여기서 STARMENU List가 추가됩니다
                         menu_original.STARMENU.add(new menu_original(menuBrandI,menuNameS,menuPrice1S,menuPrice2S,menuImageI,"",typeID,menuIngredients,extras));
                         //동시에 List를 배열로 바꿔줍니다.
-                        menu_original.starMenu = menu_original.STARMENU.toArray(new menu_original[menu_original.STARMENU.size()]);
 
                     }
                     final android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(itemOriginalActivity.this);
+                    menu_original.starMenu = menu_original.STARMENU.toArray(new menu_original[menu_original.STARMENU.size()]);
                     menu_original.save(context);
                     builder.setTitle("즐겨찾기 등록")
                             .setMessage("즐겨찾기에 등록되었습니다.")
