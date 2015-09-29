@@ -5,9 +5,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 
-/**
- * Created by ijaebeom on 2015. 9. 14..
- */
 public class splash extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

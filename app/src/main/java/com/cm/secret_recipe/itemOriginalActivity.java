@@ -22,9 +22,6 @@ import com.cm.secret_recipe.listStar.mainTabFragmentMainData2;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by ijaebeom on 2015. 9. 15..
- */
 public class itemOriginalActivity extends AppCompatActivity {
     private Context context;
 
@@ -211,10 +208,5 @@ public class itemOriginalActivity extends AppCompatActivity {
         }); // d
     }
 
-    @Override
-    protected void onDestroy() {
-        BusProvider.getInstance().unregister(this);
-        super.onDestroy();
-    }
 }
 

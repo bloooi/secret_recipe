@@ -1,0 +1,13 @@
+listOriginal : 기본 메뉴 패키지
+listSecret: 시크릿 메뉴 패키지
+listStar : 즐겨찾기 패키지
+
+intro : 어플 소개
+itemOriginalActivity : 커피에 대한 소개 엑티비티(커피 이름, 가격 등등이 나와있는 엑티비티)
+MainAcrivity : 메인 엑티비티. 뷰페이져가 보이는 엑티비티 이며 시크릿, 기본메뉴, 즐겨찾기가 나와 있음
+menu_original : 메뉴에 데이터에 대한 모든것이 들어 있음. 기본, 시크릿 메뉴가 저장되 있으며 즐겨찾기 저장, 로드, 전체 검색 기능도 있음
+notification : 공지사항
+settingActivity : 설정 엑티비티
+splash : 가장 맨 처음에 보여지는 엑티비티
+ViewPagerAdapter : 뷰페이저 제어 어뎁터
+

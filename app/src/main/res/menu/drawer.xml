@@ -3,16 +3,10 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/star"
-            android:checked="false"
-            android:icon="@drawable/ic_tab_star"
-            android:title="즐겨찾기" />
-
-        <item
             android:id="@+id/setting"
             android:checked="false"
             android:icon="@drawable/ic_tab_setting"
-            android:title="설정하기" />
+            android:title="설정" />
 
         <item
             android:id="@+id/intro"
@@ -24,7 +18,7 @@
             android:id="@+id/notice"
             android:checked="false"
             android:icon="@drawable/ic_tab_notice"
-            android:title="회원공지" />
+            android:title="공지사항" />
 
     </group>
 </menu>

@@ -10,9 +10,6 @@ import android.view.ViewGroup;
 
 import com.cm.secret_recipe.R;
 
-/**
- * Created by ijaebeom on 2015. 9. 14..
- */
 public class settingActivity extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

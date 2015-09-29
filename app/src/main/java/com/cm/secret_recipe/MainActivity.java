@@ -84,6 +84,9 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                         Intent intent = new Intent(MainActivity.this, settingActivity.class);
                         startActivity(intent);
                         return true;
+                    case R.id.intro:
+                        Intent intent2 = new Intent(MainActivity.this, intro.class);
+                        startActivity(intent2);
                     default:
                         return true;
                 }

@@ -11,9 +11,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by waps12b on 15. 9. 21..
- */
+
 
 public final class menu_original implements Serializable{
     // 즐겨찾기 메뉴를 저장하는 ArrayList입니다.

@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <android.support.v7.widget.Toolbar
-        android:id="@+id/tool_bar_intro"
+        android:id="@+id/tool_bar_notification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
@@ -19,9 +19,7 @@
             android:layout_height="wrap_content"
             android:textColor="#000000"
             android:textSize="20dp"
-            android:text="요근래 카페의 이용 빈도가 증가하여 고객들이 다양한 맛을 즐기고 싶어 하는 욕구가 상승해 다양한 레시피들이 업데이트 되고 있습니다.
-            \n각 브랜드 메뉴의 레시피나 사람들이 잘 모르는 숨겨진 레시피 등 고객들이 실제 필요로 하는 정보를 알려주고 사용자가 일일이 찾는 수고를 줄이고 어플 하나로 모든 카페의 레시피를 확인할 수 있도록 하였습니다.
-            \n커피를 좋아하는 분들에게 다양한 지식을 깔끔하게 정리해놓은 어플입니다."
+            android:text=""
             />
     </LinearLayout>
 
