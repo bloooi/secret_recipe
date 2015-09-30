@@ -33,17 +33,18 @@ public class searchResultViewHolder extends RecyclerView.ViewHolder implements V
         intent.putExtra("menuPrice1", menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].menuPrice1);
         intent.putExtra("menuPrice2", menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].menuPrice2);
         intent.putExtra("menuImageResorce", menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].drawableID);
+        if (menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].typeID == 1) {
+            intent.putExtra("menuIngredients1", menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].ingredients[0]);
+            intent.putExtra("menuIngredients2", menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].ingredients[1]);
+            intent.putExtra("menuIngredients3", menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].ingredients[2]);
+            intent.putExtra("menuExtras1Name", String.valueOf(menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].extras[0].name));
+            intent.putExtra("menuExtras2Name", String.valueOf(menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].extras[1].name));
+            intent.putExtra("menuExtras3Name", String.valueOf(menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].extras[2].name));
 
-        intent.putExtra("menuIngredients1", menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].ingredients[0]);
-        intent.putExtra("menuIngredients2", menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].ingredients[1]);
-        intent.putExtra("menuIngredients3", menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].ingredients[2]);
-        intent.putExtra("menuExtras1Name", String.valueOf(menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].extras[0].name));
-        intent.putExtra("menuExtras2Name", String.valueOf(menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].extras[1].name));
-        intent.putExtra("menuExtras3Name", String.valueOf(menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].extras[2].name));
-
-        intent.putExtra("menuExtras1Price", Integer.parseInt(String.valueOf(menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].extras[0].price)));
-        intent.putExtra("menuExtras2Price", Integer.parseInt(String.valueOf(menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].extras[1].price)));
-        intent.putExtra("menuExtras3Price", Integer.parseInt(String.valueOf(menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].extras[2].price)));
+            intent.putExtra("menuExtras1Price", Integer.parseInt(String.valueOf(menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].extras[0].price)));
+            intent.putExtra("menuExtras2Price", Integer.parseInt(String.valueOf(menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].extras[1].price)));
+            intent.putExtra("menuExtras3Price", Integer.parseInt(String.valueOf(menu_original.SearchWithName(searchResultActivity.searchName)[getLayoutPosition()].extras[2].price)));
+        }
         context.startActivity(intent);
     }
 }
