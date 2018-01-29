@@ -22,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".settingActivity"
+        <activity android:name=".SettingActivity"
             android:screenOrientation="portrait"
             >
             <intent-filter>
@@ -31,24 +31,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".splash"
+        <activity android:name=".Splash"
             android:screenOrientation="portrait">
 
         </activity>
 
-        <activity android:name=".itemOriginalActivity"
+        <activity android:name=".ItemOriginalActivity"
             android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".searchResult.searchResultActivity"
+        <activity android:name=".SearchResult.searchResultActivity"
             android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".notification"
+        <activity android:name=".Notification"
             android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".intro"
+        <activity android:name=".Intro"
             android:screenOrientation="portrait">
 
         </activity>

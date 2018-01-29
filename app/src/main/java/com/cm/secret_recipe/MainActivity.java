@@ -17,7 +17,9 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import com.cm.secret_recipe.searchResult.searchResultActivity;
+
+import com.cm.secret_recipe.List.MainFragment;
+import com.cm.secret_recipe.SearchResult.searchResultActivity;
 
 public class MainActivity extends AppCompatActivity implements DrawerLayout.DrawerListener{
 
@@ -32,14 +34,14 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        startActivity(new Intent(this, splash.class));
+        startActivity(new Intent(this, Splash.class));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         //splash Activity
         initialize();
 
-        menu_original.load(this);
+        MenuOriginal.load(this);
         //액션바
         final Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         //네비게이션 메뉴 슬라이드 레이아웃
@@ -81,15 +83,15 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
                 //네비게이션 메뉴 중에 id값을 받아와 어떤 action을 취할지 보여주는 코드
                 switch (menuItem.getItemId()) {
                     case R.id.setting: //설정하기 메뉴를 눌렀을 경우
-                        Intent intent = new Intent(MainActivity.this, settingActivity.class);
+                        Intent intent = new Intent(MainActivity.this, SettingActivity.class);
                         startActivity(intent);
                         return true;
                     case R.id.intro:
-                        Intent intent2 = new Intent(MainActivity.this, intro.class);
+                        Intent intent2 = new Intent(MainActivity.this, Intro.class);
                         startActivity(intent2);
                         return true;
                     case R.id.notice:
-                        Intent intent3 = new Intent(MainActivity.this, notification.class);
+                        Intent intent3 = new Intent(MainActivity.this, Notification.class);
                         startActivity(intent3);
                         return true;
                     default:
@@ -108,9 +110,9 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new com.cm.secret_recipe.listSecret.mainTabFragment2(), "시크릿");
-        adapter.addFrag(new com.cm.secret_recipe.listOriginal.mainTabFragment2(), "기본메뉴");
-        adapter.addFrag(new com.cm.secret_recipe.listStar.mainTabFragment2(), "즐겨찾기");
+        adapter.addFrag(MainFragment.newInstance(1), "기본메뉴");
+        adapter.addFrag(MainFragment.newInstance(2), "시크릿");
+        adapter.addFrag(MainFragment.newInstance(3), "즐겨찾기");
         viewPager.setAdapter(adapter);
     }
 

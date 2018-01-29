@@ -1,6 +1,6 @@
-listOriginal : 기본 메뉴 패키지
-listSecret: 시크릿 메뉴 패키지
-listStar : 즐겨찾기 패키지
+ListOriginal : 기본 메뉴 패키지
+ListSecret: 시크릿 메뉴 패키지
+ListStar : 즐겨찾기 패키지
 
 intro : 어플 소개
 itemOriginalActivity : 커피에 대한 소개 엑티비티(커피 이름, 가격 등등이 나와있는 엑티비티)
